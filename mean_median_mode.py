@@ -3,13 +3,13 @@ import csv
 
 def get_mean(total_weight, total_entries):
     #Calculating Mean
-    mean = total_weight / total_entries
+    # find the mean 
     print(f"Mean (Average) is -> {mean:2f}")
 
 def get_median(total_entries, sorted_data):
     #Calculating Median
     if total_entries % 2 == 0:
-        median1 = float(sorted_data[total_entries//2])
+        #find median1 
         median2 = float(sorted_data[total_entries//2 - 1])
         median = (median1 + median2) / 2
     else:
@@ -56,7 +56,7 @@ def get_mode(sorted_data):
     for range, occurence in mode_data_for_range.items():
         if occurence > mode_occurence:
             mode_range, mode_occurence = [int(range.split("-")[0]), int(range.split("-")[1])], occurence
-    mode = float((mode_range[0] + mode_range[1]) / 2)
+    #find the mode 
     print(f"Mode is -> {mode:2f}")
 
 with open('data.csv', newline='') as f:
